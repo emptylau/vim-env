@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/jcheng/Shared/test_make/bin'
+let g:netrw_dirhist_2='/home/jcheng/Shared'
+let g:netrw_dirhist_3='/home/jcheng/hungry/stl/vimbackup'
+let g:netrw_dirhist_4='/home/jcheng/.vimbackup'
+let g:netrw_dirhist_5='/home/jcheng/hungry/c++11/bin'
+let g:netrw_dirhist_6='/var/lib/locales/supported.d'
+let g:netrw_dirhist_7='/home/jcheng/eclipse/readme'
+let g:netrw_dirhist_8='/home/jcheng/.vim'
