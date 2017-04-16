@@ -16,6 +16,7 @@
 "set go= " 不要图形按钮
 set nu
 set tags+=~/.vim/tags/cpp_src/tags   " 设置tags搜索路径
+set tags+=tags;/
 "colo evening
 set guifont=Courier_New:h10:cANSI " 设置字体 
 syntax on " 语法高亮 
@@ -101,6 +102,7 @@ func SetTitle()
      """""""""""""""""""""""""""""""
      "键盘命令
      """""""""""""""""""""""""""""""
+     let mapleader=","
      nmap <leader>w :w!<cr>
      nmap <leader>f :find<cr>
      " 映射全选+复制 ctrl+a
@@ -125,6 +127,11 @@ func SetTitle()
 	 nmap <Leader>ch :A<CR>
 	 " 子窗口中显示 *.cpp 或 *.h
 	 " nmap <Leader>sch :AS<CR>
+     nmap <Leader>l <C-W>l
+     nmap <Leader>h <C-W>h
+    set cursorline   
+    hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white   
+    hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white 
 
 func! CompileRunGcc()
      exec "w"
@@ -280,15 +287,14 @@ func! Rungdb()
           
      ""     au BufRead,BufNewFile * setfiletype txt
      ""     "自动补全
-     ""     :inoremap ( ()<ESC>i
-     ""     :inoremap ) <c-r>=ClosePair(')')<CR>
-     ""     :inoremap { {<CR>}<ESC>O
-     ""     :inoremap } <c-r>=ClosePair('}')<CR>
-     ""     :inoremap [ []<ESC>i
-     ""     :inoremap ] <c-r>=ClosePair(']')<CR>
-     ""     :inoremap " ""<ESC>i
-     ""     :inoremap ' ''<ESC>i
-     ""     :inoremap / /**/<ESC>i
+     "     :inoremap ( ()<ESC>i
+     "    :inoremap ) <c-r>=ClosePair(')')<CR>
+     "    :inoremap { {<CR>}<ESC>O
+     "    :inoremap } <c-r>=ClosePair('}')<CR>
+     "     :inoremap [ []<ESC>i
+     "     :inoremap ] <c-r>=ClosePair(']')<CR>
+     "    :inoremap " ""<ESC>i
+     "   :inoremap ' ''<ESC>i
 
      function! ClosePair(char)
      if getline('.')[col('.') - 1] == a:char
